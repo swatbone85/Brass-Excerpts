@@ -13,6 +13,8 @@
 		45482E881FD4A84D008AAC93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45482E861FD4A84D008AAC93 /* Main.storyboard */; };
 		45482E8A1FD4A84D008AAC93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45482E891FD4A84D008AAC93 /* Assets.xcassets */; };
 		45482E8D1FD4A84D008AAC93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45482E8B1FD4A84D008AAC93 /* LaunchScreen.storyboard */; };
+		45482E951FD4B7E1008AAC93 /* Excerpts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45482E941FD4B7E1008AAC93 /* Excerpts.swift */; };
+		45482E971FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf in Resources */ = {isa = PBXBuildFile; fileRef = 45482E961FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		45482E891FD4A84D008AAC93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45482E8C1FD4A84D008AAC93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45482E8E1FD4A84D008AAC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45482E941FD4B7E1008AAC93 /* Excerpts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excerpts.swift; sourceTree = "<group>"; };
+		45482E961FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Hungarian March (Berlioz).pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +64,11 @@
 				45482E821FD4A84D008AAC93 /* MasterViewController.swift */,
 				45482E841FD4A84D008AAC93 /* DetailViewController.swift */,
 				45482E861FD4A84D008AAC93 /* Main.storyboard */,
+				45482E941FD4B7E1008AAC93 /* Excerpts.swift */,
 				45482E891FD4A84D008AAC93 /* Assets.xcassets */,
 				45482E8B1FD4A84D008AAC93 /* LaunchScreen.storyboard */,
 				45482E8E1FD4A84D008AAC93 /* Info.plist */,
+				45482E961FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf */,
 			);
 			path = "Brass Excerpts";
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45482E8D1FD4A84D008AAC93 /* LaunchScreen.storyboard in Resources */,
+				45482E971FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf in Resources */,
 				45482E8A1FD4A84D008AAC93 /* Assets.xcassets in Resources */,
 				45482E881FD4A84D008AAC93 /* Main.storyboard in Resources */,
 			);
@@ -142,6 +149,7 @@
 				45482E851FD4A84D008AAC93 /* DetailViewController.swift in Sources */,
 				45482E831FD4A84D008AAC93 /* MasterViewController.swift in Sources */,
 				45482E811FD4A84D008AAC93 /* AppDelegate.swift in Sources */,
+				45482E951FD4B7E1008AAC93 /* Excerpts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

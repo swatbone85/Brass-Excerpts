@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import PDFKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var pleaseSelectLabel: UILabel!
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
 
     func configureView() {
         // Update the user interface for the detail item.
@@ -24,7 +25,7 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         configureView()
     }
 
@@ -40,6 +41,9 @@ class DetailViewController: UIViewController {
         }
     }
 
+    @IBAction func shareButtonPressed(_ sender: Any) {
 
+    }
+    
 }
 
