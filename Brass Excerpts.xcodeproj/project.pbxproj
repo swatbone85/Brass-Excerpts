@@ -14,9 +14,9 @@
 		45482E8A1FD4A84D008AAC93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45482E891FD4A84D008AAC93 /* Assets.xcassets */; };
 		45482E8D1FD4A84D008AAC93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45482E8B1FD4A84D008AAC93 /* LaunchScreen.storyboard */; };
 		45482E951FD4B7E1008AAC93 /* Excerpts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45482E941FD4B7E1008AAC93 /* Excerpts.swift */; };
-		45FF14AB1FD4EF800085924D /* Test Blue in Resources */ = {isa = PBXBuildFile; fileRef = 45FF14AA1FD4EF800085924D /* Test Blue */; };
 		45FF14AD1FD5523E0085924D /* Trombone Excerpts in Resources */ = {isa = PBXBuildFile; fileRef = 45FF14AC1FD5523D0085924D /* Trombone Excerpts */; };
 		45FF14AF1FD5536A0085924D /* Trumpet Excerpts in Resources */ = {isa = PBXBuildFile; fileRef = 45FF14AE1FD5536A0085924D /* Trumpet Excerpts */; };
+		45FF14B11FD554DC0085924D /* Tuba Excerpts in Resources */ = {isa = PBXBuildFile; fileRef = 45FF14B01FD554DC0085924D /* Tuba Excerpts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		45482E8C1FD4A84D008AAC93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45482E8E1FD4A84D008AAC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45482E941FD4B7E1008AAC93 /* Excerpts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excerpts.swift; sourceTree = "<group>"; };
-		45FF14AA1FD4EF800085924D /* Test Blue */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Test Blue"; sourceTree = "<group>"; };
 		45FF14AC1FD5523D0085924D /* Trombone Excerpts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Trombone Excerpts"; sourceTree = "<group>"; };
 		45FF14AE1FD5536A0085924D /* Trumpet Excerpts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Trumpet Excerpts"; sourceTree = "<group>"; };
+		45FF14B01FD554DC0085924D /* Tuba Excerpts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Tuba Excerpts"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +72,9 @@
 				45482E891FD4A84D008AAC93 /* Assets.xcassets */,
 				45482E8B1FD4A84D008AAC93 /* LaunchScreen.storyboard */,
 				45482E8E1FD4A84D008AAC93 /* Info.plist */,
+				45FF14B01FD554DC0085924D /* Tuba Excerpts */,
 				45FF14AE1FD5536A0085924D /* Trumpet Excerpts */,
 				45FF14AC1FD5523D0085924D /* Trombone Excerpts */,
-				45FF14AA1FD4EF800085924D /* Test Blue */,
 			);
 			path = "Brass Excerpts";
 			sourceTree = "<group>";
@@ -140,8 +140,8 @@
 			files = (
 				45482E8D1FD4A84D008AAC93 /* LaunchScreen.storyboard in Resources */,
 				45FF14AF1FD5536A0085924D /* Trumpet Excerpts in Resources */,
-				45FF14AB1FD4EF800085924D /* Test Blue in Resources */,
 				45482E8A1FD4A84D008AAC93 /* Assets.xcassets in Resources */,
+				45FF14B11FD554DC0085924D /* Tuba Excerpts in Resources */,
 				45482E881FD4A84D008AAC93 /* Main.storyboard in Resources */,
 				45FF14AD1FD5523E0085924D /* Trombone Excerpts in Resources */,
 			);
