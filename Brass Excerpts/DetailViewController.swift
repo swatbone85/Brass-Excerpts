@@ -10,40 +10,19 @@ import UIKit
 import PDFKit
 
 class DetailViewController: UIViewController {
-
-    @IBOutlet weak var pleaseSelectLabel: UILabel!
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
-        }
-    }
+    
+    @IBOutlet weak var selectLabel: UILabel!
+    let pdfView = PDFView(frame: UIScreen.main.bounds)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        configureView()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
+        
+        pdfView.clipsToBounds = true
+        view.addSubview(pdfView)
     }
 
     @IBAction func shareButtonPressed(_ sender: Any) {
 
     }
-    
 }
 

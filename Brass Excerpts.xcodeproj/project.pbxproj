@@ -15,6 +15,7 @@
 		45482E8D1FD4A84D008AAC93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45482E8B1FD4A84D008AAC93 /* LaunchScreen.storyboard */; };
 		45482E951FD4B7E1008AAC93 /* Excerpts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45482E941FD4B7E1008AAC93 /* Excerpts.swift */; };
 		45482E971FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf in Resources */ = {isa = PBXBuildFile; fileRef = 45482E961FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf */; };
+		45FF14A91FD4E2070085924D /* Symphony no. 5 (Mahler) tenor.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 45FF14A81FD4E2070085924D /* Symphony no. 5 (Mahler) tenor.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		45482E8E1FD4A84D008AAC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45482E941FD4B7E1008AAC93 /* Excerpts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excerpts.swift; sourceTree = "<group>"; };
 		45482E961FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Hungarian March (Berlioz).pdf"; sourceTree = "<group>"; };
+		45FF14A81FD4E2070085924D /* Symphony no. 5 (Mahler) tenor.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Symphony no. 5 (Mahler) tenor.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +70,18 @@
 				45482E891FD4A84D008AAC93 /* Assets.xcassets */,
 				45482E8B1FD4A84D008AAC93 /* LaunchScreen.storyboard */,
 				45482E8E1FD4A84D008AAC93 /* Info.plist */,
-				45482E961FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf */,
+				45FF14A51FD4DD2C0085924D /* Test */,
 			);
 			path = "Brass Excerpts";
+			sourceTree = "<group>";
+		};
+		45FF14A51FD4DD2C0085924D /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				45FF14A81FD4E2070085924D /* Symphony no. 5 (Mahler) tenor.pdf */,
+				45482E961FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +145,7 @@
 			files = (
 				45482E8D1FD4A84D008AAC93 /* LaunchScreen.storyboard in Resources */,
 				45482E971FD4C7B1008AAC93 /* Hungarian March (Berlioz).pdf in Resources */,
+				45FF14A91FD4E2070085924D /* Symphony no. 5 (Mahler) tenor.pdf in Resources */,
 				45482E8A1FD4A84D008AAC93 /* Assets.xcassets in Resources */,
 				45482E881FD4A84D008AAC93 /* Main.storyboard in Resources */,
 			);

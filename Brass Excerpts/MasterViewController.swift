@@ -30,11 +30,6 @@ class MasterViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,20 +41,18 @@ class MasterViewController: UITableViewController {
                 destVC.navigationItem.leftItemsSupplementBackButton = true
                 
                 // REFACTOR THIS!!!
-                let pdfView = PDFView(frame: UIScreen.main.bounds)
                 var pdfTitle = String()
-                pdfTitle = "Hungarian March (Berlioz)"
+                pdfTitle = "Symphony no. 5 (Mahler) tenor"
                 let url = URL(fileURLWithPath: Bundle.main.path(forResource: pdfTitle, ofType: ".pdf")!)
-                if let document = PDFDocument(url: url) {
-                    pdfView.document = document
-                }
                 
-                destVC.view.addSubview(pdfView)
+                if let document = PDFDocument(url: url) {
+                    destVC.pdfView.document = document
+                }
             }
         }
     }
 
-    // MARK: - Table View
+    // MARK: - Table View Data Source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
