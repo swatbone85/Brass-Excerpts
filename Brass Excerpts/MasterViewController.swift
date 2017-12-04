@@ -10,14 +10,13 @@ import UIKit
 import PDFKit
 
 class MasterViewController: UITableViewController {
+    
+    @IBOutlet weak var instrumentPicker: UISegmentedControl!
 
     var detailViewController: DetailViewController? = nil
-
-    @IBOutlet weak var instrumentPicker: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
         if let split = splitViewController {
             let controllers = split.viewControllers
@@ -43,9 +42,10 @@ class MasterViewController: UITableViewController {
                 // REFACTOR THIS!!!
                 var pdfTitle = String()
                 pdfTitle = "Symphony no. 5 (Mahler) tenor"
-                let url = URL(fileURLWithPath: Bundle.main.path(forResource: pdfTitle, ofType: ".pdf")!)
-                
-                if let document = PDFDocument(url: url) {
+                let subDir = "Test Blue"
+                let url = Bundle.main.url(forResource: pdfTitle, withExtension: ".pdf", subdirectory: subDir)
+
+                if let document = PDFDocument(url: url!) {
                     destVC.pdfView.document = document
                 }
             }
@@ -103,7 +103,6 @@ class MasterViewController: UITableViewController {
     }
     
     @IBAction func instrumentPickerChosen(_ sender: UISegmentedControl) {
-        
         tableView.reloadData()
     }
 }
