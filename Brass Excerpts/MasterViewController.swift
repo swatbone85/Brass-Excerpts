@@ -7,21 +7,33 @@
 //
 
 import UIKit
-import PDFKit
+import FirebaseDatabase
 
 class MasterViewController: UITableViewController {
     
     @IBOutlet weak var instrumentPicker: UISegmentedControl!
-
+    
+    var database = Database()
+    var databaseRef = DatabaseReference()
+    
+    var chosenComposer = String()
+    var chosenPiece = String()
+    var chosenInstrument = String()
     var detailViewController: DetailViewController? = nil
+    var composers = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        database = Database.database()
+        databaseRef = database.reference()
+        
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        populateExcerptLists()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,29 +41,64 @@ class MasterViewController: UITableViewController {
         super.viewWillAppear(animated)
     }
 
-    // MARK: - Segues
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destVC = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-
+                
                 destVC.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 destVC.navigationItem.leftItemsSupplementBackButton = true
                 
-                // REFACTOR THIS!!!
-                var pdfTitle = String()
-                pdfTitle = "Symphony no. 5 (Mahler) tenor"
-                let subDir = "Test Blue"
-                let url = Bundle.main.url(forResource: pdfTitle, withExtension: ".pdf", subdirectory: subDir)
-
-                if let document = PDFDocument(url: url!) {
-                    destVC.pdfView.document = document
+                switch instrumentPicker.selectedSegmentIndex {
+                case 0:
+                    chosenInstrument = "Trumpet"
+                    chosenComposer = trumpetExcerpts[indexPath.section].composer
+                    chosenPiece = trumpetExcerpts[indexPath.section].pieces[indexPath.row]
+                    break
+                case 1:
+                    //Change to French Horn
+                    chosenInstrument = "French Horn"
+                    chosenComposer = tromboneExcerpts[indexPath.section].composer
+                    chosenPiece = tromboneExcerpts[indexPath.section].pieces[indexPath.row]
+                    break
+                case 2:
+                    chosenInstrument = "Trombone"
+                    chosenComposer = tromboneExcerpts[indexPath.section].composer
+                    chosenPiece = tromboneExcerpts[indexPath.section].pieces[indexPath.row]
+                    break
+                case 3:
+                    chosenInstrument = "Tuba"
+                    chosenComposer = tubaExcerpts[indexPath.section].composer
+                    chosenPiece = tubaExcerpts[indexPath.section].pieces[indexPath.row]
+                    break
+                default: fatalError()
                 }
+                
+                destVC.title = chosenPiece
+                destVC.filePath = "\(chosenComposer)/\(chosenPiece) (\(chosenComposer)).pdf"
+                destVC.instrument = chosenInstrument
             }
         }
     }
-
+    
+    func populateExcerptLists() {
+        databaseRef.child("trumpet").observe(.childAdded) { snapshot in
+            trumpetExcerpts.append(Excerpt.init(composer: snapshot.key, pieces: snapshot.value as! [String]))
+            self.tableView.reloadData()
+        }
+        databaseRef.child("trombone").observe(.childAdded) { snapshot in
+            tromboneExcerpts.append(Excerpt.init(composer: snapshot.key, pieces: snapshot.value as! [String]))
+        }
+        
+        databaseRef.child("tuba").observe(.childAdded) { snapshot in
+            tubaExcerpts.append(Excerpt.init(composer: snapshot.key, pieces: snapshot.value as! [String]))
+        }
+    }
+    
+    @IBAction func instrumentPickerChosen(_ sender: UISegmentedControl) {
+        tableView.reloadData()
+    }
+    
     // MARK: - Table View Data Source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -87,6 +134,10 @@ class MasterViewController: UITableViewController {
         case 3: cell.textLabel?.text = tubaExcerpts[indexPath.section].pieces[indexPath.row]
         default: fatalError()
         }
+        
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = UIColor(displayP3Red: 14/255, green: 122/255, blue: 254/255, alpha: 1)
+        cell.selectedBackgroundView = bgColorView
 
         return cell
     }
@@ -94,16 +145,12 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         switch instrumentPicker.selectedSegmentIndex {
-        case 0: return "\(trumpetExcerpts[section].composer.uppercased()), \(trumpetExcerpts[section].firstName)"
-        case 1: return "\(tromboneExcerpts[section].composer.uppercased()), \(tromboneExcerpts[section].firstName)"
-        case 2: return "\(tromboneExcerpts[section].composer.uppercased()), \(tromboneExcerpts[section].firstName)"
-        case 3: return "\(tubaExcerpts[section].composer.uppercased()), \(tubaExcerpts[section].firstName)"
+        case 0: return "\(trumpetExcerpts[section].composer.uppercased())"
+        case 1: return "\(tromboneExcerpts[section].composer.uppercased())"
+        case 2: return "\(tromboneExcerpts[section].composer.uppercased())"
+        case 3: return "\(tubaExcerpts[section].composer.uppercased())"
         default: return nil
         }
-    }
-    
-    @IBAction func instrumentPickerChosen(_ sender: UISegmentedControl) {
-        tableView.reloadData()
     }
 }
 

@@ -14,12 +14,13 @@
 		45482E8A1FD4A84D008AAC93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45482E891FD4A84D008AAC93 /* Assets.xcassets */; };
 		45482E8D1FD4A84D008AAC93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45482E8B1FD4A84D008AAC93 /* LaunchScreen.storyboard */; };
 		45482E951FD4B7E1008AAC93 /* Excerpts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45482E941FD4B7E1008AAC93 /* Excerpts.swift */; };
-		45FF14AD1FD5523E0085924D /* Trombone Excerpts in Resources */ = {isa = PBXBuildFile; fileRef = 45FF14AC1FD5523D0085924D /* Trombone Excerpts */; };
-		45FF14AF1FD5536A0085924D /* Trumpet Excerpts in Resources */ = {isa = PBXBuildFile; fileRef = 45FF14AE1FD5536A0085924D /* Trumpet Excerpts */; };
-		45FF14B11FD554DC0085924D /* Tuba Excerpts in Resources */ = {isa = PBXBuildFile; fileRef = 45FF14B01FD554DC0085924D /* Tuba Excerpts */; };
+		4564305C204EA4CD005A5E9F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564305B204EA4CD005A5E9F /* ActivityIndicator.swift */; };
+		45E19CAD204428540084A68A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45E19CAC204428540084A68A /* GoogleService-Info.plist */; };
+		AFA3247B73BAE9E7DC31B05E /* Pods_Brass_Excerpts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D527656185BE16EB57E3ECB /* Pods_Brass_Excerpts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23BF8FA97D4DCFDE90C97D32 /* Pods-Brass Excerpts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brass Excerpts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brass Excerpts/Pods-Brass Excerpts.release.xcconfig"; sourceTree = "<group>"; };
 		45482E7D1FD4A84D008AAC93 /* Brass Excerpts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brass Excerpts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45482E801FD4A84D008AAC93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45482E821FD4A84D008AAC93 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -29,9 +30,10 @@
 		45482E8C1FD4A84D008AAC93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45482E8E1FD4A84D008AAC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45482E941FD4B7E1008AAC93 /* Excerpts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excerpts.swift; sourceTree = "<group>"; };
-		45FF14AC1FD5523D0085924D /* Trombone Excerpts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Trombone Excerpts"; sourceTree = "<group>"; };
-		45FF14AE1FD5536A0085924D /* Trumpet Excerpts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Trumpet Excerpts"; sourceTree = "<group>"; };
-		45FF14B01FD554DC0085924D /* Tuba Excerpts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Tuba Excerpts"; sourceTree = "<group>"; };
+		4564305B204EA4CD005A5E9F /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		45E19CAC204428540084A68A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D527656185BE16EB57E3ECB /* Pods_Brass_Excerpts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brass_Excerpts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEAA29264CB8A9FE1B653467 /* Pods-Brass Excerpts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brass Excerpts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brass Excerpts/Pods-Brass Excerpts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA3247B73BAE9E7DC31B05E /* Pods_Brass_Excerpts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		064321BD5072A8295EEEF756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D527656185BE16EB57E3ECB /* Pods_Brass_Excerpts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		133A8D0C6CAA17F5396D9715 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEAA29264CB8A9FE1B653467 /* Pods-Brass Excerpts.debug.xcconfig */,
+				23BF8FA97D4DCFDE90C97D32 /* Pods-Brass Excerpts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		45482E741FD4A84D008AAC93 = {
 			isa = PBXGroup;
 			children = (
 				45482E7F1FD4A84D008AAC93 /* Brass Excerpts */,
 				45482E7E1FD4A84D008AAC93 /* Products */,
+				133A8D0C6CAA17F5396D9715 /* Pods */,
+				064321BD5072A8295EEEF756 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,12 +91,11 @@
 				45482E841FD4A84D008AAC93 /* DetailViewController.swift */,
 				45482E861FD4A84D008AAC93 /* Main.storyboard */,
 				45482E941FD4B7E1008AAC93 /* Excerpts.swift */,
+				4564305B204EA4CD005A5E9F /* ActivityIndicator.swift */,
 				45482E891FD4A84D008AAC93 /* Assets.xcassets */,
 				45482E8B1FD4A84D008AAC93 /* LaunchScreen.storyboard */,
 				45482E8E1FD4A84D008AAC93 /* Info.plist */,
-				45FF14B01FD554DC0085924D /* Tuba Excerpts */,
-				45FF14AE1FD5536A0085924D /* Trumpet Excerpts */,
-				45FF14AC1FD5523D0085924D /* Trombone Excerpts */,
+				45E19CAC204428540084A68A /* GoogleService-Info.plist */,
 			);
 			path = "Brass Excerpts";
 			sourceTree = "<group>";
@@ -86,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45482E911FD4A84D008AAC93 /* Build configuration list for PBXNativeTarget "Brass Excerpts" */;
 			buildPhases = (
+				705AB361A9F7A7C23A0CE290 /* [CP] Check Pods Manifest.lock */,
 				45482E791FD4A84D008AAC93 /* Sources */,
 				45482E7A1FD4A84D008AAC93 /* Frameworks */,
 				45482E7B1FD4A84D008AAC93 /* Resources */,
+				316FF72857F8996986A52E7E /* [CP] Embed Pods Frameworks */,
+				8E58CB000D6A869246F9D219 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -106,7 +130,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Thomas Swatland";
 				TargetAttributes = {
 					45482E7C1FD4A84D008AAC93 = {
@@ -139,15 +163,75 @@
 			buildActionMask = 2147483647;
 			files = (
 				45482E8D1FD4A84D008AAC93 /* LaunchScreen.storyboard in Resources */,
-				45FF14AF1FD5536A0085924D /* Trumpet Excerpts in Resources */,
 				45482E8A1FD4A84D008AAC93 /* Assets.xcassets in Resources */,
-				45FF14B11FD554DC0085924D /* Tuba Excerpts in Resources */,
 				45482E881FD4A84D008AAC93 /* Main.storyboard in Resources */,
-				45FF14AD1FD5523E0085924D /* Trombone Excerpts in Resources */,
+				45E19CAD204428540084A68A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		316FF72857F8996986A52E7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Brass Excerpts/Pods-Brass Excerpts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brass Excerpts/Pods-Brass Excerpts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		705AB361A9F7A7C23A0CE290 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Brass Excerpts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E58CB000D6A869246F9D219 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brass Excerpts/Pods-Brass Excerpts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		45482E791FD4A84D008AAC93 /* Sources */ = {
@@ -155,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45482E851FD4A84D008AAC93 /* DetailViewController.swift in Sources */,
+				4564305C204EA4CD005A5E9F /* ActivityIndicator.swift in Sources */,
 				45482E831FD4A84D008AAC93 /* MasterViewController.swift in Sources */,
 				45482E811FD4A84D008AAC93 /* AppDelegate.swift in Sources */,
 				45482E951FD4B7E1008AAC93 /* Excerpts.swift in Sources */,
@@ -197,6 +282,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -204,6 +290,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -254,6 +341,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -261,6 +349,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -285,6 +374,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -292,11 +382,13 @@
 		};
 		45482E921FD4A84D008AAC93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEAA29264CB8A9FE1B653467 /* Pods-Brass Excerpts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PY55DGNG5;
 				INFOPLIST_FILE = "Brass Excerpts/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "thomasswatland.Brass-Excerpts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -307,11 +399,13 @@
 		};
 		45482E931FD4A84D008AAC93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23BF8FA97D4DCFDE90C97D32 /* Pods-Brass Excerpts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PY55DGNG5;
 				INFOPLIST_FILE = "Brass Excerpts/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "thomasswatland.Brass-Excerpts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
