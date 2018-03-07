@@ -86,11 +86,11 @@
 		45482E7F1FD4A84D008AAC93 /* Brass Excerpts */ = {
 			isa = PBXGroup;
 			children = (
+				4564305D204EB79D005A5E9F /* Models */,
 				45482E801FD4A84D008AAC93 /* AppDelegate.swift */,
 				45482E821FD4A84D008AAC93 /* MasterViewController.swift */,
 				45482E841FD4A84D008AAC93 /* DetailViewController.swift */,
 				45482E861FD4A84D008AAC93 /* Main.storyboard */,
-				4564305D204EB79D005A5E9F /* Models */,
 				45482E891FD4A84D008AAC93 /* Assets.xcassets */,
 				45482E8B1FD4A84D008AAC93 /* LaunchScreen.storyboard */,
 				45482E8E1FD4A84D008AAC93 /* Info.plist */,
@@ -398,7 +398,7 @@
 				INFOPLIST_FILE = "Brass Excerpts/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "thomasswatland.Brass-Excerpts";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomasswatland.Brass-Excerpts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -415,7 +415,7 @@
 				INFOPLIST_FILE = "Brass Excerpts/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "thomasswatland.Brass-Excerpts";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomasswatland.Brass-Excerpts";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

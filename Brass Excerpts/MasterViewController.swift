@@ -56,10 +56,9 @@ class MasterViewController: UITableViewController {
                     chosenPiece = trumpetExcerpts[indexPath.section].pieces[indexPath.row]
                     break
                 case 1:
-                    //Change to French Horn
                     chosenInstrument = "French Horn"
-                    chosenComposer = tromboneExcerpts[indexPath.section].composer
-                    chosenPiece = tromboneExcerpts[indexPath.section].pieces[indexPath.row]
+                    chosenComposer = frenchHornExcerpts[indexPath.section].composer
+                    chosenPiece = frenchHornExcerpts[indexPath.section].pieces[indexPath.row]
                     break
                 case 2:
                     chosenInstrument = "Trombone"
@@ -86,6 +85,10 @@ class MasterViewController: UITableViewController {
             trumpetExcerpts.append(Excerpt.init(composer: snapshot.key, pieces: snapshot.value as! [String]))
             self.tableView.reloadData()
         }
+        
+        databaseRef.child("french_horn").observe(.childAdded) { snapshot in
+            frenchHornExcerpts.append(Excerpt.init(composer: snapshot.key, pieces: snapshot.value as! [String]))
+        }
         databaseRef.child("trombone").observe(.childAdded) { snapshot in
             tromboneExcerpts.append(Excerpt.init(composer: snapshot.key, pieces: snapshot.value as! [String]))
         }
@@ -105,7 +108,7 @@ class MasterViewController: UITableViewController {
         
         switch instrumentPicker.selectedSegmentIndex {
         case 0: return trumpetExcerpts.count
-        case 1: return tromboneExcerpts.count
+        case 1: return frenchHornExcerpts.count
         case 2: return tromboneExcerpts.count
         case 3: return tubaExcerpts.count
         default: fatalError()
@@ -116,7 +119,7 @@ class MasterViewController: UITableViewController {
         
         switch instrumentPicker.selectedSegmentIndex {
         case 0: return trumpetExcerpts[section].pieces.count
-        case 1: return tromboneExcerpts[section].pieces.count
+        case 1: return frenchHornExcerpts[section].pieces.count
         case 2: return tromboneExcerpts[section].pieces.count
         case 3: return tubaExcerpts[section].pieces.count
         default: fatalError()
@@ -129,7 +132,7 @@ class MasterViewController: UITableViewController {
         
         switch instrumentPicker.selectedSegmentIndex {
         case 0: cell.textLabel?.text = trumpetExcerpts[indexPath.section].pieces[indexPath.row]
-        case 1: cell.textLabel?.text = tromboneExcerpts[indexPath.section].pieces[indexPath.row]
+        case 1: cell.textLabel?.text = frenchHornExcerpts[indexPath.section].pieces[indexPath.row]
         case 2: cell.textLabel?.text = tromboneExcerpts[indexPath.section].pieces[indexPath.row]
         case 3: cell.textLabel?.text = tubaExcerpts[indexPath.section].pieces[indexPath.row]
         default: fatalError()
@@ -146,7 +149,7 @@ class MasterViewController: UITableViewController {
         
         switch instrumentPicker.selectedSegmentIndex {
         case 0: return "\(trumpetExcerpts[section].composer.uppercased())"
-        case 1: return "\(tromboneExcerpts[section].composer.uppercased())"
+        case 1: return "\(frenchHornExcerpts[section].composer.uppercased())"
         case 2: return "\(tromboneExcerpts[section].composer.uppercased())"
         case 3: return "\(tubaExcerpts[section].composer.uppercased())"
         default: return nil

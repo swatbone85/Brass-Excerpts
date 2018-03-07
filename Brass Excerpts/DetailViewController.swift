@@ -20,7 +20,6 @@ class DetailViewController: UIViewController {
     let container = ActivityIndicator.container
     let activityIndicator = ActivityIndicator.activityIndicator
     
-    @IBOutlet weak var selectLabel: UILabel!
     let webView = WKWebView()
 
     override func viewDidLoad() {
@@ -39,6 +38,7 @@ class DetailViewController: UIViewController {
     
     func setupWebView() {
         webView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        
         
         webView.navigationDelegate = self
         view.addSubview(webView)

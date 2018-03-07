@@ -14,5 +14,6 @@ struct Excerpt {
 }
 
 var trumpetExcerpts = [Excerpt]()
+var frenchHornExcerpts = [Excerpt]()
 var tromboneExcerpts = [Excerpt]()
 var tubaExcerpts = [Excerpt]()
